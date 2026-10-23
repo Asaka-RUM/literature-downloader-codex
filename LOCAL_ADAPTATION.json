@@ -1,0 +1,26 @@
+{
+  "skill": "literature-downloader",
+  "local_version": "2026-10-24.1",
+  "upstream_repository": "https://github.com/Lucaswangzcx/literature-downloader-skill",
+  "upstream_commit": "0e8f306fc5205fc90657fbd916a952fa9c9d773a",
+  "published_repository": "https://github.com/Asaka-RUM/literature-downloader-codex",
+  "license": "MIT",
+  "browser_preference": "ego",
+  "reference_manager": "existing Zotero skill and Connector",
+  "changes": [
+    "Validate actual PDF structure; save HTML/XML as unverified content",
+    "Preserve successful files and log history during retry and resume",
+    "Keep relevance priority independent from download availability",
+    "Retain canonical inputs and logs during non-destructive organization",
+    "Generate Chinese PDF reports locally with ReportLab without browser launch",
+    "Refuse destructive re-initialization of an existing run directory"
+  ],
+  "verification": {
+    "offline_regressions_passed": 17,
+    "installed_local_http_pipeline": "passed; valid PDF requested once, unresolved records retried",
+    "chinese_pdf_visual_check": "passed",
+    "real_publisher_download_tested": false,
+    "pdf_validation_scope": "structure only, not article identity or semantic completeness"
+  },
+  "update_note": "Merge local changes when updating upstream; a fresh upstream install alone does not include these adaptations."
+}
